@@ -30,7 +30,7 @@ export default function Index() {
           case 'showcase':
             return <Showcase />
           default:
-            return <Home />
+            return <Home changeContent={changeContent}/>
         }
       })()}
       </body>

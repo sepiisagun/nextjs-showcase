@@ -11,7 +11,7 @@ import {
 import { useColorModeValue } from '@chakra-ui/color-mode'
 import React, { useState }from 'react'
 
-export default function Home() {
+export default function Home({ changeContent }) {
 
     return(
         <main className={styles.main}>
@@ -35,7 +35,7 @@ export default function Home() {
                   p={6}
                   overflow={'hidden'}>
                 <Stack>
-                  <Link href='./about'>
+                  <Link onClick={() => changeContent('about')}>
                     <Heading
                       color={useColorModeValue('gray.700', 'white')}
                       fontSize={'2xl'}
@@ -58,7 +58,7 @@ export default function Home() {
                   p={6}
                   overflow={'hidden'}>
                 <Stack>
-                  <Link href='./showcase'>
+                  <Link onClick={() => changeContent('showcase')}>
                     <Heading
                       color={useColorModeValue('gray.700', 'white')}
                       fontSize={'2xl'}
